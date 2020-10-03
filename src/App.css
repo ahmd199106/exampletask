@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.optButton {
+  justify-content: space-around;
+  width: 25%;
+  
+  
+}
+
+.allOption {
+  border-style: groove;
+}

@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import NavBar from "./components/NavBar";
+import Content from "./components/Content";
+
+
+import "./App.css";
 
 function App() {
+  
+  const [selected, setSelected] = useState(0)
+
+  const handleSelected =(number)=> {
+    setSelected(number)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar selected={selected} handleSelected={handleSelected}  />
+      <Content selected={selected} />
     </div>
   );
 }
